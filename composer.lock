@@ -4,8 +4,119 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5438861ad666f7367e7d9ae0e539b7d0",
+    "content-hash": "a1b8fef8a3bb29aefc30d3bedfd78a99",
     "packages": [
+        {
+            "name": "bower-asset/blueimp-canvas-to-blob",
+            "version": "v3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blueimp/JavaScript-Canvas-to-Blob.git",
+                "reference": "ce0b6f09ff8c4c94e9efe69763f7a34d41ee57df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blueimp/JavaScript-Canvas-to-Blob/zipball/ce0b6f09ff8c4c94e9efe69763f7a34d41ee57df",
+                "reference": "ce0b6f09ff8c4c94e9efe69763f7a34d41ee57df",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
+        },
+        {
+            "name": "bower-asset/blueimp-file-upload",
+            "version": "v9.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blueimp/jQuery-File-Upload.git",
+                "reference": "0b4af3c57b86b3c7147c4d7c75deb71a0133f0e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/0b4af3c57b86b3c7147c4d7c75deb71a0133f0e3",
+                "reference": "0b4af3c57b86b3c7147c4d7c75deb71a0133f0e3",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/blueimp-canvas-to-blob": ">=2.1.1",
+                "bower-asset/blueimp-load-image": ">=1.13.0",
+                "bower-asset/blueimp-tmpl": ">=2.5.4",
+                "bower-asset/jquery": ">=1.6"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "js/jquery.fileupload.js"
+                ],
+                "bower-asset-ignore": [
+                    "/*.*",
+                    "/cors",
+                    "css/demo-ie8.css",
+                    "css/demo.css",
+                    "css/style.css",
+                    "js/app.js",
+                    "js/main.js",
+                    "server",
+                    "test"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "File Upload widget with multiple file selection, drag&amp;drop support, progress bar, validation and preview images.",
+            "keywords": [
+                "bootstrap",
+                "chunk",
+                "cross-domain",
+                "cross-site",
+                "drag",
+                "drop",
+                "file",
+                "gae",
+                "go",
+                "jquery",
+                "multiple",
+                "php",
+                "preview",
+                "progress",
+                "python",
+                "resume",
+                "selection",
+                "upload",
+                "widget"
+            ]
+        },
+        {
+            "name": "bower-asset/blueimp-load-image",
+            "version": "v2.12.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blueimp/JavaScript-Load-Image.git",
+                "reference": "caf36d45d843b38b8763cb4a921d7ce51681a08c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blueimp/JavaScript-Load-Image/zipball/caf36d45d843b38b8763cb4a921d7ce51681a08c",
+                "reference": "caf36d45d843b38b8763cb4a921d7ce51681a08c",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
+        },
+        {
+            "name": "bower-asset/blueimp-tmpl",
+            "version": "v3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blueimp/JavaScript-Templates.git",
+                "reference": "dc7631396cd541db5644aa2c651e342c68511aad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blueimp/JavaScript-Templates/zipball/dc7631396cd541db5644aa2c651e342c68511aad",
+                "reference": "dc7631396cd541db5644aa2c651e342c68511aad",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.7",
@@ -87,17 +198,42 @@
             ]
         },
         {
-            "name": "bower-asset/jquery.inputmask",
-            "version": "3.3.6",
+            "name": "bower-asset/jquery-ui",
+            "version": "1.11.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "e42852f4afa01a80815394a5b2f9ce504c1a8d0b"
+                "url": "https://github.com/components/jqueryui.git",
+                "reference": "c34f8dbf3ba57b3784b93f26119f436c0e8288e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/e42852f4afa01a80815394a5b2f9ce504c1a8d0b",
-                "reference": "e42852f4afa01a80815394a5b2f9ce504c1a8d0b",
+                "url": "https://api.github.com/repos/components/jqueryui/zipball/c34f8dbf3ba57b3784b93f26119f436c0e8288e1",
+                "reference": "c34f8dbf3ba57b3784b93f26119f436c0e8288e1",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.6"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "jquery-ui.js"
+                ],
+                "bower-asset-ignore": []
+            }
+        },
+        {
+            "name": "bower-asset/jquery.inputmask",
+            "version": "3.3.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "reference": "9835731cb78cac749734d94a1cb5bd70da4d3b10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/9835731cb78cac749734d94a1cb5bd70da4d3b10",
+                "reference": "9835731cb78cac749734d94a1cb5bd70da4d3b10",
                 "shasum": ""
             },
             "require": {
@@ -268,17 +404,57 @@
             "time": "2016-09-14T20:40:20+00:00"
         },
         {
-            "name": "ezyang/htmlpurifier",
-            "version": "v4.9.2",
+            "name": "dmstr/yii2-migrate-command",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "6d50e5282afdfdfc3e0ff6d192aff56c5629b3d4"
+                "url": "https://github.com/dmstr/yii2-migrate-command.git",
+                "reference": "dcfe52c088b8039ce7e08e0b0fa5cff0002f2d79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/6d50e5282afdfdfc3e0ff6d192aff56c5629b3d4",
-                "reference": "6d50e5282afdfdfc3e0ff6d192aff56c5629b3d4",
+                "url": "https://api.github.com/repos/dmstr/yii2-migrate-command/zipball/dcfe52c088b8039ce7e08e0b0fa5cff0002f2d79",
+                "reference": "dcfe52c088b8039ce7e08e0b0fa5cff0002f2d79",
+                "shasum": ""
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dmstr\\console\\controllers\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Munk",
+                    "email": "tobias@diemeisterei.de"
+                }
+            ],
+            "description": "Console Migration Command with multiple paths/aliases support",
+            "keywords": [
+                "command",
+                "console",
+                "extension",
+                "migration",
+                "yii2"
+            ],
+            "time": "2016-01-19T17:31:24+00:00"
+        },
+        {
+            "name": "ezyang/htmlpurifier",
+            "version": "v4.9.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezyang/htmlpurifier.git",
+                "reference": "95e1bae3182efc0f3422896a3236e991049dac69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/95e1bae3182efc0f3422896a3236e991049dac69",
+                "reference": "95e1bae3182efc0f3422896a3236e991049dac69",
                 "shasum": ""
             },
             "require": {
@@ -312,7 +488,216 @@
             "keywords": [
                 "html"
             ],
-            "time": "2017-03-13T06:30:53+00:00"
+            "time": "2017-06-03T02:28:16+00:00"
+        },
+        {
+            "name": "league/flysystem",
+            "version": "1.0.40",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem.git",
+                "reference": "3828f0b24e2c1918bb362d57a53205d6dc8fde61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3828f0b24e2c1918bb362d57a53205d6dc8fde61",
+                "reference": "3828f0b24e2c1918bb362d57a53205d6dc8fde61",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "conflict": {
+                "league/flysystem-sftp": "<1.0.6"
+            },
+            "require-dev": {
+                "ext-fileinfo": "*",
+                "mockery/mockery": "~0.9",
+                "phpspec/phpspec": "^2.2",
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-fileinfo": "Required for MimeType",
+                "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
+                "league/flysystem-aws-s3-v3": "Allows you to use S3 storage with AWS SDK v3",
+                "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
+                "league/flysystem-cached-adapter": "Flysystem adapter decorator for metadata caching",
+                "league/flysystem-copy": "Allows you to use Copy.com storage",
+                "league/flysystem-eventable-filesystem": "Allows you to use EventableFilesystem",
+                "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
+                "league/flysystem-sftp": "Allows you to use SFTP server storage via phpseclib",
+                "league/flysystem-webdav": "Allows you to use WebDAV storage",
+                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter",
+                "spatie/flysystem-dropbox": "Allows you to use Dropbox storage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Flysystem\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Filesystem abstraction: Many filesystems, one API.",
+            "keywords": [
+                "Cloud Files",
+                "WebDAV",
+                "abstraction",
+                "aws",
+                "cloud",
+                "copy.com",
+                "dropbox",
+                "file systems",
+                "files",
+                "filesystem",
+                "filesystems",
+                "ftp",
+                "rackspace",
+                "remote",
+                "s3",
+                "sftp",
+                "storage"
+            ],
+            "time": "2017-04-28T10:15:08+00:00"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v5.2.23",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "7115df4a6f76281109ebe352900c42403b728bb4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/7115df4a6f76281109ebe352900c42403b728bb4",
+                "reference": "7115df4a6f76281109ebe352900c42403b728bb4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "1.2.*",
+                "jms/serializer": "0.16.*",
+                "phpdocumentor/phpdocumentor": "2.*",
+                "phpunit/phpunit": "4.8.*",
+                "symfony/debug": "2.8.*",
+                "symfony/filesystem": "2.8.*",
+                "symfony/translation": "2.8.*",
+                "symfony/yaml": "2.8.*",
+                "zendframework/zend-cache": "2.5.1",
+                "zendframework/zend-config": "2.5.1",
+                "zendframework/zend-eventmanager": "2.5.1",
+                "zendframework/zend-filter": "2.5.1",
+                "zendframework/zend-i18n": "2.5.1",
+                "zendframework/zend-json": "2.5.1",
+                "zendframework/zend-math": "2.5.1",
+                "zendframework/zend-serializer": "2.5.*",
+                "zendframework/zend-servicemanager": "2.5.*",
+                "zendframework/zend-stdlib": "2.5.1"
+            },
+            "suggest": {
+                "league/oauth2-google": "Needed for Google XOAUTH2 authentication"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class.phpmailer.php",
+                    "class.phpmaileroauth.php",
+                    "class.phpmaileroauthgoogle.php",
+                    "class.smtp.php",
+                    "class.pop3.php",
+                    "extras/EasyPeasyICS.php",
+                    "extras/ntlm_sasl_client.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "time": "2017-03-15T19:32:56+00:00"
+        },
+        {
+            "name": "rmrevin/yii2-postman",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmrevin/yii2-postman.git",
+                "reference": "2d1aca93fd0fafcde89488bf38e32f7836b66e02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmrevin/yii2-postman/zipball/2d1aca93fd0fafcde89488bf38e32f7836b66e02",
+                "reference": "2d1aca93fd0fafcde89488bf38e32f7836b66e02",
+                "shasum": ""
+            },
+            "require": {
+                "phpmailer/phpmailer": "~v5.2",
+                "yiisoft/yii2": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.2"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "rmrevin\\yii\\postman\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Revin Roman",
+                    "email": "xgismox@gmail.com",
+                    "homepage": "http://rmrevin.ru/",
+                    "role": "Founder and project lead"
+                }
+            ],
+            "description": "Mail module for Yii2.",
+            "keywords": [
+                "email",
+                "mail",
+                "phpmailer",
+                "queue",
+                "sending",
+                "yii2"
+            ],
+            "time": "2017-05-03T13:05:24+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -369,22 +754,71 @@
             "time": "2017-05-01T15:54:03+00:00"
         },
         {
-            "name": "yiisoft/yii2",
-            "version": "2.0.11.2",
+            "name": "trntv/yii2-file-kit",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "ee996adec1dfd7babb67bd0c604f5bd6425fe5ab"
+                "url": "https://github.com/trntv/yii2-file-kit.git",
+                "reference": "0b24b638b7bc8f41d75d4d5428188035052ee890"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ee996adec1dfd7babb67bd0c604f5bd6425fe5ab",
-                "reference": "ee996adec1dfd7babb67bd0c604f5bd6425fe5ab",
+                "url": "https://api.github.com/repos/trntv/yii2-file-kit/zipball/0b24b638b7bc8f41d75d4d5428188035052ee890",
+                "reference": "0b24b638b7bc8f41d75d4d5428188035052ee890",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/blueimp-file-upload": "^9.7.0",
+                "league/flysystem": "^1.0",
+                "yiisoft/yii2": "^2.0.0",
+                "yiisoft/yii2-jui": "^2.0.0"
+            },
+            "require-dev": {
+                "creocoder/yii2-flysystem": "~0.8",
+                "phpunit/phpunit": "~4.5.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "trntv\\filekit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Terentev",
+                    "email": "eugene@terentev.net"
+                }
+            ],
+            "description": "Yii2 file upload and storage kit",
+            "time": "2017-01-16T10:32:27+00:00"
+        },
+        {
+            "name": "yiisoft/yii2",
+            "version": "2.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-framework.git",
+                "reference": "70acbecc75cb26b6cd66d16be0b06e4b73db190d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/70acbecc75cb26b6cd66d16be0b06e4b73db190d",
+                "reference": "70acbecc75cb26b6cd66d16be0b06e4b73db190d",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/jquery": "2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
-                "bower-asset/jquery.inputmask": "~3.2.2 | ~3.3.3",
+                "bower-asset/jquery.inputmask": "~3.2.2 | ~3.3.5",
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": "~2.0.1",
                 "cebe/markdown": "~1.0.0 | ~1.1.0",
@@ -466,7 +900,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2017-02-08T09:04:32+00:00"
+            "time": "2017-06-05T14:33:41+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -567,6 +1001,56 @@
                 "yii2"
             ],
             "time": "2016-12-20T13:26:02+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-jui",
+            "version": "2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-jui.git",
+                "reference": "843a2160cfe30f5c8b0cb2e9dbd8ee6bcf97e71d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/843a2160cfe30f5c8b0cb2e9dbd8ee6bcf97e71d",
+                "reference": "843a2160cfe30f5c8b0cb2e9dbd8ee6bcf97e71d",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery-ui": "1.11.*@stable",
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\jui\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com"
+                }
+            ],
+            "description": "The Jquery UI extension for the Yii framework",
+            "keywords": [
+                "jQuery UI",
+                "yii2"
+            ],
+            "time": "2016-07-22T22:26:59+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -1684,16 +2168,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "6.2.0",
+            "version": "6.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "23bcb03e5c6a8b8067f6c2b28f6cd84b2df321cc"
+                "reference": "f2786490399836d2a544a34785c4a8d3ab32cf0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/23bcb03e5c6a8b8067f6c2b28f6cd84b2df321cc",
-                "reference": "23bcb03e5c6a8b8067f6c2b28f6cd84b2df321cc",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f2786490399836d2a544a34785c4a8d3ab32cf0e",
+                "reference": "f2786490399836d2a544a34785c4a8d3ab32cf0e",
                 "shasum": ""
             },
             "require": {
@@ -1738,7 +2222,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.1.x-dev"
+                    "dev-master": "6.2.x-dev"
                 }
             },
             "autoload": {
@@ -1764,7 +2248,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-06-02T08:02:48+00:00"
+            "time": "2017-06-13T14:07:07+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2528,7 +3012,7 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.3.0",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
@@ -2585,16 +3069,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.0",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "c80e63f3f5e3a331bfc25e6e9332b10422eb9b05"
+                "reference": "70d2a29b2911cbdc91a7e268046c395278238b2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/c80e63f3f5e3a331bfc25e6e9332b10422eb9b05",
-                "reference": "c80e63f3f5e3a331bfc25e6e9332b10422eb9b05",
+                "url": "https://api.github.com/repos/symfony/console/zipball/70d2a29b2911cbdc91a7e268046c395278238b2e",
+                "reference": "70d2a29b2911cbdc91a7e268046c395278238b2e",
                 "shasum": ""
             },
             "require": {
@@ -2607,6 +3091,7 @@
             },
             "require-dev": {
                 "psr/log": "~1.0",
+                "symfony/config": "~3.3",
                 "symfony/dependency-injection": "~3.3",
                 "symfony/event-dispatcher": "~2.8|~3.0",
                 "symfony/filesystem": "~2.8|~3.0",
@@ -2649,11 +3134,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-28T14:08:56+00:00"
+            "time": "2017-06-02T19:24:58+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v3.3.0",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -2706,16 +3191,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.0",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "ef5f19a7a68075a0bd05969a329ead3b0776fb7a"
+                "reference": "e9c50482841ef696e8fa1470d950a79c8921f45d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/ef5f19a7a68075a0bd05969a329ead3b0776fb7a",
-                "reference": "ef5f19a7a68075a0bd05969a329ead3b0776fb7a",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/e9c50482841ef696e8fa1470d950a79c8921f45d",
+                "reference": "e9c50482841ef696e8fa1470d950a79c8921f45d",
                 "shasum": ""
             },
             "require": {
@@ -2758,11 +3243,11 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-27T16:02:27+00:00"
+            "time": "2017-06-01T21:01:25+00:00"
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v3.3.0",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -2818,16 +3303,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.3.0",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "a9f8b02b0ef07302eca92cd4bba73200b7980e9c"
+                "reference": "4054a102470665451108f9b59305c79176ef98f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a9f8b02b0ef07302eca92cd4bba73200b7980e9c",
-                "reference": "a9f8b02b0ef07302eca92cd4bba73200b7980e9c",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/4054a102470665451108f9b59305c79176ef98f0",
+                "reference": "4054a102470665451108f9b59305c79176ef98f0",
                 "shasum": ""
             },
             "require": {
@@ -2877,20 +3362,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-04T12:23:07+00:00"
+            "time": "2017-06-04T18:15:29+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.0",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "30cb2a2c09627823a7243638dd456de4e2748fed"
+                "reference": "baea7f66d30854ad32988c11a09d7ffd485810c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/30cb2a2c09627823a7243638dd456de4e2748fed",
-                "reference": "30cb2a2c09627823a7243638dd456de4e2748fed",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/baea7f66d30854ad32988c11a09d7ffd485810c4",
+                "reference": "baea7f66d30854ad32988c11a09d7ffd485810c4",
                 "shasum": ""
             },
             "require": {
@@ -2926,20 +3411,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-25T23:10:31+00:00"
+            "time": "2017-06-01T21:01:25+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e79d363049d1c2128f133a2667e4f4190904f7f4",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
                 "shasum": ""
             },
             "require": {
@@ -2951,7 +3436,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -2985,20 +3470,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-06-09T14:24:12+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.3.0",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "885db865f6b2b918404a1fae28f9ac640f71f994"
+                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/885db865f6b2b918404a1fae28f9ac640f71f994",
-                "reference": "885db865f6b2b918404a1fae28f9ac640f71f994",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/9752a30000a8ca9f4b34b5227d15d0101b96b063",
+                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063",
                 "shasum": ""
             },
             "require": {
@@ -3040,7 +3525,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-28T10:56:20+00:00"
+            "time": "2017-06-02T22:05:06+00:00"
         },
         {
             "name": "theseer/tokenizer",

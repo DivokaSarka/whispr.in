@@ -36,8 +36,12 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Исходный код'],
-            ['label' => 'Крнфиденциальность'],
+            [
+                'label' => 'Исходный код',
+                'url' => 'https://github.com/DivokaSarka/whispr.in',
+                'linkOptions' => ['target' => '_blank'],
+            ],
+            ['label' => 'Конфиденциальность'],
             ['label' => 'О нас'],
         ],
     ]);

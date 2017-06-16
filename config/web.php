@@ -52,6 +52,15 @@ $config = [
             'linkAssets' => true,
             'appendTimestamp' => true,
         ],
+        'fileStorage' => [
+            'class' => 'trntv\filekit\Storage',
+            'baseUrl' => '@web/uploads',
+            'filesystem' => [
+                'class' => 'app\components\LocalFilesystemBuilder',
+                'path' => '@webroot/uploads',
+            ],
+        ],
+        'postman' => require(__DIR__ . '/postman.php'),
     ],
     'params' => $params,
 ];

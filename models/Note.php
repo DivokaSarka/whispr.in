@@ -8,12 +8,14 @@ use yii\db\ActiveRecord;
  * Class Note
  * @package app\models
  *
- * @property $uid string
- * @property $password_hash string
- * @property $body string
- *
- * @property $password string
- * @property $passwordRepeat string
+ * @property string $uid
+ * @property string $password_hash
+ * @property string $body
+ * @property string $email
+ * @property string $password
+ * @property string $passwordRepeat
+ * @property string $file_path
+ * @property integer $lifetime
  */
 class Note extends ActiveRecord
 {
@@ -27,6 +29,10 @@ class Note extends ActiveRecord
 
     private $passwordEntered = false;
 
+    public $lifetimeOption;
+
+    public $file;
+
     public static function tableName()
     {
         return '{{%note}}';
@@ -35,7 +41,14 @@ class Note extends ActiveRecord
     public function scenarios()
     {
         return [
-            self::SCENARIO_CREATE => ['body', 'password', 'passwordRepeat'],
+            self::SCENARIO_CREATE => [
+                'body',
+                'password',
+                'passwordRepeat',
+                'email',
+                'lifetimeOption',
+                'file',
+            ],
             self::SCENARIO_ENTER_PASSWORD => ['password'],
         ];
     }
@@ -48,6 +61,8 @@ class Note extends ActiveRecord
             ['password', 'compare', 'compareAttribute' => 'passwordRepeat', 'on' => self::SCENARIO_CREATE],
             ['password', 'required', 'on' => self::SCENARIO_ENTER_PASSWORD],
             ['password', 'validateEnterPassword', 'on' => self::SCENARIO_ENTER_PASSWORD],
+            ['email', 'email', 'on' => self::SCENARIO_CREATE],
+            ['lifetimeOptions', 'in', 'range' => array_keys(self::getLifetimeOptions()), 'on' => self::SCENARIO_CREATE],
         ];
     }
 
@@ -64,6 +79,7 @@ class Note extends ActiveRecord
             'body' => 'Текст записки',
             'password' => 'Секретный пароль',
             'passwordRepeat' => 'Повторите пароль',
+            'lifetimeOptions' => 'Время жизни',
         ];
     }
 
@@ -76,6 +92,14 @@ class Note extends ActiveRecord
                 $this->password = $security->generateRandomString(8);
             } else {
                 $this->passwordEntered = true;
+            }
+
+            if ($this->lifetimeOption > 0) {
+                $this->lifetime = time() + ($this->lifetimeOption * 60 * 60);
+            }
+
+            if (!empty($this->file)) {
+                $this->file_path = $this->file['path'] ?? '';
             }
 
             $this->uid = $security->generateRandomString(16);
@@ -108,5 +132,25 @@ class Note extends ActiveRecord
         }
 
         return \Yii::$app->request->getHostInfo() . '/' . $id;
+    }
+
+    public static function getLifetimeOptions()
+    {
+        return [
+            0 => 'после прочтения',
+            1 => 'спустя 1 час',
+            24 => 'спустя 24 часа',
+            168 => 'спустя 7 дней',
+            720 => 'спустя 30 дней',
+        ];
+    }
+
+    public function sendNotify()
+    {
+        (new \rmrevin\yii\postman\ViewLetter())
+            ->setSubject('Уведомление об уничтожении')
+            ->setBodyFromView('delete-note-notify', ['model' => $this])
+            ->addAddress([$this->email])
+            ->send();
     }
 }

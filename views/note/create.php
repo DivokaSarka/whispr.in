@@ -1,6 +1,7 @@
 <?php
-/* @var $model \app\models\Note */
+/* @var $model Note */
 
+use app\models\Note;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
@@ -50,6 +51,30 @@ use yii\widgets\Pjax;
             ->passwordInput()
             ->hint('Повторить пароль')
             ->label(false) ?>
+    </div>
+    <div class="col-md-6">
+        <h4>Уведомление об уничтожении</h4>
+        <?= $form->field($model, 'email')
+            ->textInput()
+            ->label(false)
+            ->hint('E-mail для получения уведомления об уничтожении записки.') ?>
+    </div>
+    <div class="col-md-6">
+        <h4>Записка самоуничтожится</h4>
+        <?= $form->field($model, 'lifetimeOption')
+            ->dropDownList(Note::getLifetimeOptions())
+            ->label(false) ?>
+    </div>
+    <div class="col-md-12">
+        <h4>Прикрепить файл</h4>
+        <?= $form->field($model, 'file')->widget(
+            '\trntv\filekit\widget\Upload',
+            [
+                'url' => ['/file/upload'],
+                'multiple' => false,
+                'maxFileSize' => 10 * 1024 * 1024, // 10 MiB
+            ]
+        )->label(false) ?>
     </div>
 </div>
 

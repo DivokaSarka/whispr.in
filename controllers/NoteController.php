@@ -55,7 +55,13 @@ class NoteController extends Controller
             }
         }
 
-        $model->delete();
+        if ($model->lifetime === 0 || (time() >= $model->lifetime)) {
+            $model->delete();
+
+            if (!empty($model->email)) {
+                $model->sendNotify();
+            }
+        }
 
         return $this->render('view', [
             'model' => $model,
